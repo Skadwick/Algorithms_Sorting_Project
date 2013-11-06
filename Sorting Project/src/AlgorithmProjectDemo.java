@@ -66,9 +66,9 @@ public class AlgorithmProjectDemo {
 		//Print outputs.
 		System.out.print("Results: ");
 		for(int i = 0; i < runTime.length; ++i) {
-			System.out.println("Test #" + (i+1) + ": " + runTime[i] + "ms");
+			System.out.println("Test #" + (i+1) + ": " + runTime[i] + "ns");
 		}
-		System.out.println("Average run time: " + avgTime + "ms.");
+		System.out.println("Average run time: " + avgTime + "ns.");
 
 	}
 
