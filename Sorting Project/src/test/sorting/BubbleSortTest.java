@@ -18,26 +18,26 @@ public class BubbleSortTest extends SortingTest {
       
       //Algorithm or algorithm call here
       // Bubble Sort ---------------------------------------------------------------
-//      int j;
-//      
-//      boolean flag = true; // Set flag to true to begin first pass
-//      int temp; // Holding variable
-//      
-//      while ( flag )
-//      {
-//        flag= false; // Set flag to false awaiting a possible swap
-//        for(j=0; j < num.length-1; j++)
-//        {
-//          if(num[j] < num[j+1]) // Change to > for ascending sort
-//          {
-//            temp = num[j]; // Swap elements
-//            num[j] = num[j+1];
-//            num[j+1] = temp;
-//            flag = true; // Shows a swap occurred  
-//          } 
-//        } 
-//      } 
-//      
+    /* int j;
+      
+      boolean flag = true; // Set flag to true to begin first pass
+      int temp; // Holding variable
+      
+      while ( flag )
+      {
+        flag= false; // Set flag to false awaiting a possible swap
+        for(j=0; j < super.numTests.length-1; j++)
+        {
+          if(numTests[j] < numTests[j+1]) // Change to > for ascending sort
+          {
+            temp = numTests[j]; // Swap elements
+            numTests[j] = numTests[j+1];
+            numTests[j+1] = temp;
+            flag = true; // Shows a swap occurred  
+          } 
+        } 
+      } 
+      */
       //-------------------------------------------------------------------------------------
       
       long endTime = System.nanoTime(); 
@@ -47,8 +47,7 @@ public class BubbleSortTest extends SortingTest {
     
     System.out.println("Test(s) complete!");
     
-  }
-  
+  } 
 }
 
 
