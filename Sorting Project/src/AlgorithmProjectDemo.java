@@ -64,7 +64,7 @@ public class AlgorithmProjectDemo {
 		avgTime = mainTest.getAvgRunTime();
 		
 		//Print outputs.
-		System.out.print("Results: ");
+		System.out.println("Results: ");
 		for(int i = 0; i < runTime.length; ++i) {
 			System.out.println("Test #" + (i+1) + ": " + runTime[i] + "ns");
 		}

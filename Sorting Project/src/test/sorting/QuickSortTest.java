@@ -17,7 +17,7 @@ public void runTest() {
    
    //Algorithm or algorithm call here
    // Sort the array.
-      quickSort(array, 0, 9);
+      quickSort(super.numList, 0, super.numList.length-1);
    
    long endTime = System.nanoTime(); 
    System.out.println("Test #" + (i+1) + " has completed.");
@@ -27,8 +27,7 @@ public void runTest() {
   System.out.println("Test(s) complete!");
   
  }
-
-}
+ 
  /**
       The quickSort method uses the QuickSort algorithm to
       sort array, from array[start] through array[end].
@@ -40,7 +39,7 @@ public void runTest() {
                  to sort.
    */
    
-  /* public static void quickSort(int array[], int start,
+  public static void quickSort(int array[], int start,
                                 int end)
    {
       int pivotPoint;
@@ -57,7 +56,7 @@ public void runTest() {
          quickSort(array, pivotPoint + 1, end);
       }
    }
-*/
+
    /**
       The partition method selects the value in the middle
       of the array as the pivot. The list is rearranged so
@@ -72,7 +71,7 @@ public void runTest() {
                  to sort.
    */
    
- /*  private static int partition(int array[], int start,
+  private static int partition(int array[], int start,
                                 int end)
    {
       int pivotValue, pivotIndex, mid;
@@ -94,7 +93,7 @@ public void runTest() {
       
       return pivotIndex;
    }
-   */
+
    /**
       The swap method swaps the element at array[a] with
       the element at array[b].
@@ -102,7 +101,7 @@ public void runTest() {
       @param The first element to swap.
       @param The second element to swap.
    */
-   /*
+
    private static void swap(int[] array, int a, int b)
    {
       int temp;
@@ -111,6 +110,7 @@ public void runTest() {
       array[a] = array[b];
       array[b] = temp;
    }
+
 }
-*/
+ 
 
