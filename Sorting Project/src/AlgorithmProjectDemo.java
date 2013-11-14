@@ -62,13 +62,14 @@ public class AlgorithmProjectDemo {
 		mainTest.runTest();
 		runTime = mainTest.getRunTime();
 		avgTime = mainTest.getAvgRunTime();
+      Double avgTimeSec = (double)avgTime/1000000000;
 		
 		//Print outputs.
 		System.out.println("Results: ");
 		for(int i = 0; i < runTime.length; ++i) {
 			System.out.println("Test #" + (i+1) + ": " + runTime[i] + "ns");
 		}
-		System.out.println("Average run time: " + avgTime + "ns.");
+		System.out.println("Average run time: " + avgTimeSec + " seconds (" + avgTime + "ns)");
 
 	}
 

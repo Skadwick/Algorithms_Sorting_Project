@@ -2,31 +2,31 @@ package test.sorting;
 
 public class QuickSortTest extends SortingTest {
 
- public QuickSortTest(int s, int n) {
-  super(s, n);
- }
+   public QuickSortTest(int s, int n) {
+      super(s, n);
+   }
  
-public void runTest() {
-  
-  System.out.println("Running quicksort " + super.numTests + " times on " + super.size + " elements.");
-  
-  for(int i = 0; i < super.numTests; ++i) {
-   super.generateNewList();
-   System.out.println("Starting test #" + (i+1) + "." );
-   long startTime = System.nanoTime();
+   public void runTest() {
    
-   //Algorithm or algorithm call here
-   // Sort the array.
-      quickSort(super.numList, 0, super.numList.length-1);
+      System.out.println("Running quicksort " + super.numTests + " times on " + super.size + " elements.");
    
-   long endTime = System.nanoTime(); 
-   System.out.println("Test #" + (i+1) + " has completed.");
-   super.runTime[i] = endTime - startTime;
-  }
-  
-  System.out.println("Test(s) complete!");
-  
- }
+      for(int i = 0; i < super.numTests; ++i) {
+         super.generateNewList();
+         System.out.println("Starting test #" + (i+1) + "." );
+         long startTime = System.nanoTime();
+      
+      //Algorithm or algorithm call here
+      // Sort the array.
+         quickSort(super.numList, 0, super.numList.length-1);
+      
+         long endTime = System.nanoTime(); 
+         System.out.println("Test #" + (i+1) + " has completed.");
+         super.runTime[i] = endTime - startTime;
+      }
+   
+      System.out.println("Test(s) complete!");
+   
+   }
  
  /**
       The quickSort method uses the QuickSort algorithm to
@@ -39,7 +39,7 @@ public void runTest() {
                  to sort.
    */
    
-  public static void quickSort(int array[], int start,
+   public static void quickSort(int array[], int start,
                                 int end)
    {
       int pivotPoint;
@@ -71,13 +71,13 @@ public void runTest() {
                  to sort.
    */
    
-  private static int partition(int array[], int start,
+   private static int partition(int array[], int start,
                                 int end)
    {
       int pivotValue, pivotIndex, mid;
-
+   
       mid = (start + end) / 2;
-
+   
       swap(array, start, mid);
       pivotIndex = start;
       pivotValue = array[start];
