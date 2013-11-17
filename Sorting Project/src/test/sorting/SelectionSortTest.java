@@ -17,7 +17,7 @@ public class SelectionSortTest extends SortingTest {
 			long startTime = System.nanoTime();
 			
 			//Algorithm or algorithm call here
-			//selectionSort(super.numList);
+			selectionSort(super.numList);
 			
 			long endTime = System.nanoTime();	
 			System.out.println("Test #" + (i+1) + " has completed.");
@@ -28,5 +28,25 @@ public class SelectionSortTest extends SortingTest {
 	}
 
 
-	
+	private void selectionSort(int[] list) {
+		
+		int min;
+		
+		for(int i = 0; i < list.length-1; ++i) {		
+			min = i;			
+			for(int j = i+1; j < list.length; ++j) {
+				//Check for new minimum
+				if(list[j] < list[min]) {
+					min = j;
+				}
+			}
+			
+			//If a number smaller than j was found, swap them.
+			if(min != i) {
+				super.swap(list, i, min);
+			}
+			
+		}
+		
+	}
 }
