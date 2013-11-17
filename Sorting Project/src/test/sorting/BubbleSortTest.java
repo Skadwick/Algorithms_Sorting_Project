@@ -1,5 +1,4 @@
 package test.sorting;
-import java.util.*;
 
 public class BubbleSortTest extends SortingTest {
   
@@ -44,9 +43,7 @@ public class BubbleSortTest extends SortingTest {
 		  swapped = false;
 		  for(int i = 1; i < len; ++i) {
 			  if( list[i-1] > list[i] ) {
-				  int temp = list[i-1];
-				  list[i-1] = list[i];
-				  list[i] = temp;
+				  super.swap(list, i-1, i);
 				  swapped = true;
 			  }
 		  }

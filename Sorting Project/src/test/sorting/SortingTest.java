@@ -49,6 +49,23 @@ public class SortingTest {
 	}
 	
 	
+	/**
+    The swap method swaps the element at array[a] with
+    the element at array[b].
+    @param array The array containing the elements.
+    @param The first element to swap.
+    @param The second element to swap.
+	 */
+
+	protected void swap(int[] array, int a, int b)
+	{
+		int temp;     
+		temp = array[a];
+		array[a] = array[b];
+		array[b] = temp;
+	}
+	
+	
 	protected void generateNewList() {
 		for(int i = 0; i < size; ++i) {
 			numList[i] = randNum.nextInt();

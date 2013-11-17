@@ -17,14 +17,16 @@ public class SelectionSortTest extends SortingTest {
 			long startTime = System.nanoTime();
 			
 			//Algorithm or algorithm call here
+			//selectionSort(super.numList);
 			
 			long endTime = System.nanoTime();	
 			System.out.println("Test #" + (i+1) + " has completed.");
 			super.runTime[i] = endTime - startTime;
 		}
 		
-		System.out.println("Test(s) complete!");
-		
+		System.out.println("Test(s) complete!");		
 	}
 
+
+	
 }

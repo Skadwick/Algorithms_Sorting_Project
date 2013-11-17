@@ -29,7 +29,7 @@ public class QuickSortTest extends SortingTest {
    }
  
    
- /**
+   /**
       The quickSort method uses the QuickSort algorithm to
       sort array, from array[start] through array[end].
       
@@ -39,7 +39,7 @@ public class QuickSortTest extends SortingTest {
       @param end The ending subscript of the region
                  to sort.
    */  
-   public static void quickSort(int array[], int start, int end)
+   public void quickSort(int array[], int start, int end)
    {
       int pivotPoint;
       
@@ -56,6 +56,7 @@ public class QuickSortTest extends SortingTest {
       }
    }
 
+   
    /**
       The partition method selects the value in the middle
       of the array as the pivot. The list is rearranged so
@@ -69,14 +70,14 @@ public class QuickSortTest extends SortingTest {
       @param end The ending subscript of the region
                  to sort.
    */
-   
-   private static int partition(int array[], int start, int end)
+ 
+   private int partition(int array[], int start, int end)
    {
       int pivotValue, pivotIndex, mid;
    
       mid = (start + end) / 2;
    
-      swap(array, start, mid);
+      super.swap(array, start, mid);
       pivotIndex = start;
       pivotValue = array[start];
       for (int scan = start + 1; scan <= end; scan++)
@@ -87,25 +88,9 @@ public class QuickSortTest extends SortingTest {
             swap(array, pivotIndex, scan);
          }
       }     
-      swap(array, start, pivotIndex);
+      super.swap(array, start, pivotIndex);
       
       return pivotIndex;
-   }
-
-   /**
-      The swap method swaps the element at array[a] with
-      the element at array[b].
-      @param array The array containing the elements.
-      @param The first element to swap.
-      @param The second element to swap.
-   */
-
-   private static void swap(int[] array, int a, int b)
-   {
-      int temp;     
-      temp = array[a];
-      array[a] = array[b];
-      array[b] = temp;
    }
 }
  
