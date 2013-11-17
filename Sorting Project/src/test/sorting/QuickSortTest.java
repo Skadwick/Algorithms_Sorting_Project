@@ -15,8 +15,8 @@ public class QuickSortTest extends SortingTest {
          System.out.println("Starting test #" + (i+1) + "." );
          long startTime = System.nanoTime();
       
-      //Algorithm or algorithm call here
-      // Sort the array.
+         //Algorithm or algorithm call here
+         // Sort the array.
          quickSort(super.numList, 0, super.numList.length-1);
       
          long endTime = System.nanoTime(); 
@@ -28,6 +28,7 @@ public class QuickSortTest extends SortingTest {
    
    }
  
+   
  /**
       The quickSort method uses the QuickSort algorithm to
       sort array, from array[start] through array[end].
@@ -37,10 +38,8 @@ public class QuickSortTest extends SortingTest {
                    to sort.
       @param end The ending subscript of the region
                  to sort.
-   */
-   
-   public static void quickSort(int array[], int start,
-                                int end)
+   */  
+   public static void quickSort(int array[], int start, int end)
    {
       int pivotPoint;
       
@@ -71,8 +70,7 @@ public class QuickSortTest extends SortingTest {
                  to sort.
    */
    
-   private static int partition(int array[], int start,
-                                int end)
+   private static int partition(int array[], int start, int end)
    {
       int pivotValue, pivotIndex, mid;
    
@@ -104,13 +102,11 @@ public class QuickSortTest extends SortingTest {
 
    private static void swap(int[] array, int a, int b)
    {
-      int temp;
-      
+      int temp;     
       temp = array[a];
       array[a] = array[b];
       array[b] = temp;
    }
-
 }
  
 
