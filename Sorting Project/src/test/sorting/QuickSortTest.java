@@ -15,30 +15,18 @@ public class QuickSortTest extends SortingTest {
          System.out.println("Starting test #" + (i+1) + "." );
          long startTime = System.nanoTime();
       
-         //Algorithm or algorithm call here
-         // Sort the array.
+         // Quicksort call
          quickSort(super.numList, 0, super.numList.length-1);
       
          long endTime = System.nanoTime(); 
          System.out.println("Test #" + (i+1) + " has completed.");
          super.runTime[i] = endTime - startTime;
       }
-   
+
       System.out.println("Test(s) complete!");
-   
    }
  
-   
-   /**
-      The quickSort method uses the QuickSort algorithm to
-      sort array, from array[start] through array[end].
-      
-      @param array The array to sort.
-      @param start The starting subscript of the region
-                   to sort.
-      @param end The ending subscript of the region
-                 to sort.
-   */  
+   // Quicksort Method
    public void quickSort(int array[], int start, int end)
    {
       int pivotPoint;
@@ -55,22 +43,14 @@ public class QuickSortTest extends SortingTest {
          quickSort(array, pivotPoint + 1, end);
       }
    }
-
    
-   /**
-      The partition method selects the value in the middle
+   /* Partition Method -
+      Partition method selects the value in the middle
       of the array as the pivot. The list is rearranged so
       all the values less than the pivot are on its left
       and all the values greater than pivot are on its
       right.
-      
-      @param array The array being sorted.
-      @param start The starting subscript of the region
-                   to sort.
-      @param end The ending subscript of the region
-                 to sort.
    */
- 
    private int partition(int array[], int start, int end)
    {
       int pivotValue, pivotIndex, mid;

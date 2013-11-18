@@ -15,9 +15,9 @@ public class BubbleSortTest extends SortingTest {
       System.out.println("Starting test #" + (i+1) + "." );
       long startTime = System.nanoTime();
       
-      //Algorithm or algorithm call here
+      // Bubble sort call
       bubbleSort(super.numList);
-     
+      
       long endTime = System.nanoTime(); 
       System.out.println("Test #" + (i+1) + " has completed.");
       super.runTime[i] = endTime - startTime;
@@ -26,7 +26,7 @@ public class BubbleSortTest extends SortingTest {
     System.out.println("Test(s) complete!");
     
   }
-
+  
   
   /*
    * Runs through the list and swaps elements accordingly, until it 
@@ -34,24 +34,24 @@ public class BubbleSortTest extends SortingTest {
    * the list is completed without any swaps being made.
    */
   private void bubbleSort(int[] list) {
-	  
-	  int len = list.length;
-	  
-	  boolean swapped;
-	  
-	  do{
-		  swapped = false;
-		  for(int i = 1; i < len; ++i) {
-			  if( list[i-1] > list[i] ) {
-				  super.swap(list, i-1, i);
-				  swapped = true;
-			  }
-		  }
-		  
-		  //Each pass, the largest, 2nd largest, 3rd largest, etc... items are put
-		  //into their final place.  Update len to reflect this.
-		  len -= 1;
-	  }while(swapped);
+    
+    int len = list.length;
+    
+    boolean swapped;
+    
+    do{
+      swapped = false;
+      for(int i = 1; i < len; ++i) {
+        if( list[i-1] > list[i] ) {
+          super.swap(list, i-1, i);
+          swapped = true;
+        }
+      }
+      
+      // Each pass, the largest, 2nd largest, 3rd largest, etc... items are put
+      // into their final place.  Update len to reflect this.
+      len -= 1;
+    }while(swapped);
   } 
 }
 

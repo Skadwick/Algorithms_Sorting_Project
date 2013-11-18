@@ -18,7 +18,7 @@ public class MergeSortTest extends SortingTest {
       int first = 0;
       int last = super.numList.length-1;
       
-      //Algorithm or algorithm call here
+      // Mergesort call
       mergesort(super.numList, first, last);
       
       long endTime = System.nanoTime(); 
@@ -29,7 +29,7 @@ public class MergeSortTest extends SortingTest {
     System.out.println("Test(s) complete!"); 
   }
   
-  public static void mergesort(int[ ] data, int first, int n)
+  public static void mergesort(int[ ] list, int first, int n)
   {
     int n1; // Size of the first half of the array
     int n2; // Size of the second half of the array
@@ -40,42 +40,43 @@ public class MergeSortTest extends SortingTest {
       n1 = n / 2;
       n2 = n - n1;
       
-      mergesort(data, first, n1);      // Sort data[first] through data[first+n1-1]
-      mergesort(data, first + n1, n2); // Sort data[first+n1] to the end
+      mergesort(list, first, n1);      // Sort list[first] through list[first+n1-1]
+      mergesort(list, first + n1, n2); // Sort list[first+n1] to the end
       
+      // Merge Call
       // Merge the two sorted halves.
-      merge(data, first, n1, n2);
+      merge(list, first, n1, n2);
     }
   } 
   
 // Merge
-  private static void merge(int[ ] data, int first, int n1, int n2)
-    // Precondition: Smallest to Largest
+  private static void merge(int[ ] list, int first, int n1, int n2)
   {
-    int[ ] temp = new int[n1+n2]; // Allocate the temporary array
-    int copied  = 0; // Number of elements copied from data to temp
-    int copied1 = 0; // Number copied from the first half of data
-    int copied2 = 0; // Number copied from the second half of data
-    int i;           // Array index to copy from temp back into data
+    int[ ] temp = new int[n1+n2]; // Create temp array
+    int copied  = 0; // Number of elements copied from list to temp
+    int copied1 = 0; // Number copied from the first half of list
+    int copied2 = 0; // Number copied from the second half of list
+    int i;           // Array index to copy from temp back into list
     
-    // Merge elements, copying from two halves of data to the temporary array.
+    // Merge elements, copying from two halves of list to the temp array.
     while ((copied1 < n1) && (copied2 < n2))
     {
-      if (data[first + copied1] < data[first + n1 + copied2])
-        temp[copied++] = data[first + (copied1++)];
+      if (list[first + copied1] < list[first + n1 + copied2])
+        temp[copied++] = list[first + (copied1++)];
       else
-        temp[copied++] = data[first + n1 + (copied2++)];
+        temp[copied++] = list[first + n1 + (copied2++)];
     }
     
     // Copy any remaining entries in the left and right subarrays.
     while (copied1 < n1)
-      temp[copied++] = data[first + (copied1++)];
-    while (copied2 < n2)
-      temp[copied++] = data[first + n1 + (copied2++)];
+      temp[copied++] = list[first + (copied1++)];
     
-    // Copy from temp back to the data array.
+    while (copied2 < n2)
+      temp[copied++] = list[first + n1 + (copied2++)];
+    
+    // Copy from temp back to the list array.
     for (i = 0; i < n1+n2; i++)
-      data[first + i] = temp[i];
+      list[first + i] = temp[i];
   }  
 }
 
